@@ -1,13 +1,9 @@
 ---
 layout: post
-date: 2013-11-13 21:46:38 +0200
 title: Intro to Objective-C - Part One
-
-author:
-  name: Nico Hämäläinen
-  twitter: clooth
-  bio: Derp.
-  image: nh.png
+tags: [objective-c, development, osx, ios]
+image:
+  feature: plains.jpg
 
 ---
 
