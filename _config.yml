@@ -1,51 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
 title:            sizeof.io
-tagline:          "Polybloat™ programmer, designer and thinker."
-description:      "Crazytalk about programming, design and inbetween."
-#Comment out url when working locally to resolve base urls correctly
-url: http://sizeof.io
+tagline:          'Polybloat™ programmer, designer and thinker.'
+description:      'Crazytalk about programming, design and inbetween. Written by <a href="https://twitter.com/clooth" target="_blank">@clooth</a>.'
+url:              http://sizeof.io
 
-# Owner/author information
-owner:
-  name:           Nico Hämäläinen
-  avatar:         avatar.png
-  bio:            "Aesthete & Athlete"
-  email:          nico@sizeof.io
-  twitter:        clooth
-  github:         clooth
-  instagram:      false
-  dribbble:       false
-  disqus:         sizeofio
-  # Plug in your disqus shortname!
+author:
+  name:           'Nico Hämäläinen'
+  url:            https://twitter.com/clooth
 
+paginate:         5
 
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about
+# Custom vars
+version:          2.0.0
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Europe/Helsinki
-future:      true
-pygments:    true
-markdown:    kramdown
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-  coderay:
-    coderay_line_numbers:
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+github:
+  repo:           https://github.com/poole/hyde
