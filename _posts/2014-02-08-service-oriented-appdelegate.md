@@ -287,3 +287,5 @@ And the implementation of the AppDelegate is done in a very simple service-orien
 ```
 
 Now when you launch your application, you will notice that the PushNotificationService is correctly tied into your AppDelegate, and responds to all the proper delegate methods sent by your application.
+
+Demo project is available over at [github](https://github.com/clooth/ServiceOrientedAppDelegate)
