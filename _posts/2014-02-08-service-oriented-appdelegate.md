@@ -2,6 +2,7 @@
 layout: post
 date: 2014-02-08 23:07:30 +0200
 title: Service Oriented AppDelegate
+tags: [objective-c, ios, osx, architecture]
 ---
 
 Have you ever wished your `AppDelegate` wasn't so bloated when you integrate lots of different services into it? Social Media Libraries, Analytics, Debugging Tools and other services make your `AppDelegate` a lot larger than it should ideally be. I will show you how to overcome this problem and decouple your services away from your AppDelegate's implementation.
