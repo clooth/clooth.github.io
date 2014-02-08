@@ -19,10 +19,14 @@
     <meta content="website" property="og:type">
   {% endif %}
 
-  {% if page.description %}
-    <meta content="{{ page.description | strip_html }}" property="og:description">
+  {% if page.date %}
+    <meta content="{{ page.content | split:'<!-- more -->' | first | xml_escape }}" property="og:description">
   {% else %}
-    <meta content="{{ site.description | strip_html }}" property="og:description">
+    {% if page.description %}
+      <meta content="{{ page.description | strip_html }}" property="og:description">
+    {% else %}
+      <meta content="{{ site.description | strip_html }}" property="og:description">
+    {% endif %}
   {% endif %}
 
   {% if page.url %}
@@ -45,6 +49,9 @@
   <meta content="{{ category }}" property="article:section">
   {% endfor %}
   {% endif %}
+
+  <meta property="fb:admins" content="clooth" />
+  <meta property="fb:app_id" content="806230736060494"/>
 
   {% if page.tags %}
     {% for tag in page.tags %}

@@ -9,6 +9,8 @@ Have you ever wished your `AppDelegate` wasn't so bloated when you integrate lot
 
 Based on several open source libraries and projects, I've found a much better way of organizing your integrations into **Services**, which are decoupled classes that keep your `AppDelegate` organized and neat.
 
+<!-- more -->
+
 The example we'll be using is very simple to keep this article easy to follow and understand. We'll be creating a `Service-Based AppDelegate` that handles **Push Notifications** outside of the main AppDelegate file.
 
 Note that all of the service classes you will be creating are singleton classes since the way our AppDelegate works, is that it initializes them only once.

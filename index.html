@@ -14,7 +14,12 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{ post.content }}
+    {% if post.content contains '<!-- more -->' %}
+        {{ post.content | split:'<!-- more -->' | first }}
+    {% else %}
+        {{ post.content }}
+    {% endif %}
+
   </div>
   {% endfor %}
 </div>
