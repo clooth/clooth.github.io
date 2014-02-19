@@ -15,7 +15,7 @@ The goal: Take my photo whenever I build my application in Xcode.
 First, install the [imagesnap](https://github.com/rharder/imagesnap) library from [homebrew](http://brew.sh):
 
 ```bash
-brew install snapimage
+brew install imagesnap
 ```
 
 Once all is good, open your project in Xcode, and add a new `Run Script` Build Phase.
