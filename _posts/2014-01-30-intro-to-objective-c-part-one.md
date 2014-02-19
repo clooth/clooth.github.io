@@ -3,6 +3,7 @@ layout: post
 date: 2014-01-30 13:33:06 +0200
 title: Intro to Objective-C - Part One
 tags: objective-c ios osx languages
+published: true
 ---
 
 In this series of articles we'll set up a foundation for understanding and writing Objective-C code. We will also look at working with some of the most basic frameworks provided by Apple.
