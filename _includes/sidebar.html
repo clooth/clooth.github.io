@@ -10,11 +10,6 @@
         <a href="/">Home</a>
       </li>
 
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
-
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
@@ -28,6 +23,8 @@
 
       <li class="sidebar-nav-item"><a href="http://twitter.com/clooth">Twitter</a></li>
     </ul>
+
+     <p><a href="http://feeds.feedburner.com/sizeof" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a></p>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
