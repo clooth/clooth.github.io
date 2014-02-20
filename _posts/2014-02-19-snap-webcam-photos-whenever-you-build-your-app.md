@@ -2,7 +2,7 @@
 layout: post
 date: 2014-02-19 20:22:13 +0200
 title: Snap webcam photos whenever you build your app
-tags: [xcode, experiment]
+tags: [xcode, experiment, webcam]
 published: true
 ---
 
