@@ -1,0 +1,31 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}">
+        <a href="/">Home</a>
+      </li>
+
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+              <a href="{{ node.url }}">{{ node.title }}</a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <li class="sidebar-nav-item"><a href="http://twitter.com/clooth">Twitter</a></li>
+    </ul>
+
+     <p><a href="http://feeds.feedburner.com/sizeof" rel="alternate" type="application/rss+xml"><img src="//feedburner.google.com/fb/images/pub/feed-icon32x32.png" alt="" style="vertical-align:middle;border:0"/></a></p>
+
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+  </div>
+</div>

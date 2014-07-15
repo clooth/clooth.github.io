@@ -1,44 +1,72 @@
 ---
-layout: base
+layout: default
 ---
-{% if page.cover_image %}
-<div class="article-cover">
-    <div>
-        <img src="/images/{{ page.cover_image }}" class="image">
-    </div>
+
+<div class="post">
+  <a href="/">Back Home</a>
+  <hr>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {{ content }}
 </div>
-{% endif %}
-<article>
 
-    <div class="container">
-        <header>
-            <div class="meta">
-                By <address><a rel="author" href="http://twitter.com/clooth" title="Nico Hämäläinen" target="_blank">Nico Hämäläinen</a></address> &mdash;
-                <time pubdate datetime="{{ page.date | date: "%Y-%d-%B" }}" title="{{ page.date | date: "%B %d, %Y" }}">{{ page.date | date: "%B %d, %Y" }}</time>
-            </div>
-            <h1 class="title">{{ page.title }}</h1>
-            {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
-        </header>
+<div class="sharing">
+  <h3>If you enjoyed this article, please share it:</h3>
 
-        <section>
-            {{ content }}
-            {% include _social.html %}
-        </section>
+  <div class="fb-like"
+    data-href="{{size.url + post.url}}"
+    data-width="90"
+    data-layout="button_count"
+    data-action="recommend"
+    data-show-faces="false"
+    data-share="true">
+  </div>
 
-        <footer>
+  <a href="https://twitter.com/share"
+    class="twitter-share-button"
+    data-url="{{size.url + post.url}}"
+    data-via="clooth"
+    data-lang="en">
+  </a>
 
-            <address>
-               <img src="/images/avatar.png">
-                <p>Written by <strong><a rel="author" href="https://twitter.com/clooth" title="Nico Hämäläinen" target="_blank">Nico Hämäläinen</a></strong>
-                </p>
-            </address>
+  <div class="g-plusone"
+    data-href="{{size.url + post.url}}"
+    data-size="medium"
+    data-annotation="bubble">
+  </div>
+</div>
 
-        </footer>
+<div class="comments">
+  <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'sizeofio'; // required: replace example with your forum shortname
 
-        {% if site.inc.disqus.shortname %}
-        <section>
-            {% include _disqus.html %}
-        </section>
-        {% endif %}
-    </div>
-</article>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
