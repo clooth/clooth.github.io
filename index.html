@@ -1,44 +1,18 @@
 ---
 layout: default
-title: Home
+title: sizeof.io
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  {% if post.published %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<div id="home">
+   <p class="intro"><a href="http://twitter.com/clooth">Twitter</a> and
+   <a href="/atom.xml">Atom feed.</a></p>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+   <h2>Posts</h2>
+   <ul class="posts">
+      {% for post in site.posts %}
+      <li><span>&gt; {{ post.date | date_to_string }}</span> <a href="{{ post.url }}">{{ post.title }}</a>{{ post.excerpt }}</li>
+      {% endfor %}
+   </ul>
 
-    {% if post.content contains '<!-- more -->' %}
-        {{ post.content | split:'<!-- more -->' | first }}
-    {% else %}
-        {{ post.content }}
-    {% endif %}
-
-  </div>
-  {% endif %}
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
+   <h2>Me</h2>
 </div>

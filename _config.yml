@@ -1,23 +1,10 @@
-# Dependencies
-markdown:         redcarpet
-pygments:         true
+name: "sizeof.io"
+markdown: redcarpet
+highlighter: pygments
+permalink: :title
+exclude: [README.md, LICENSE, Makefile]
 
-
-# Permalinks
-permalink:        pretty
-
-# Setup
-title:            sizeof.io
-tagline:          'Polybloat™ programmer, designer and thinker.'
-description:      'Crazytalk about programming, design and inbetween. Written by <a href="https://twitter.com/clooth" target="_blank">@clooth</a>.'
-url:              http://sizeof.io
-
-author:
-  name:           'Nico Hämäläinen'
-  url:            https://twitter.com/clooth
-
-paginate:         5
-
-# Custom vars
-version:          2.0.0
-plugins:          ./_plugins
+# Information for the Atom feed
+extra:
+   author: "Nico Hämäläinen"
+   email: "nico@sizeof.io"
